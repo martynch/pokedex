@@ -30,24 +30,24 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         searchBar.returnKeyType = UIReturnKeyType.done
         
         parsePokemonCSV()
-        initAudio()
+//        initAudio()
         
     }
     
-    func initAudio() {
-        let path = Bundle.main.path(forResource: "music", ofType: "mp3")!
-        
-        do {
-            
-            musicPlayer = try AVAudioPlayer(contentsOf: URL(string: path)!)
-            musicPlayer.prepareToPlay()
-            musicPlayer.numberOfLoops = -1
-            musicPlayer.pause()
-            
-        } catch let err as NSError {
-            print(err.debugDescription)
-        }
-    }
+//    func initAudio() {
+//        let path = Bundle.main.path(forResource: "music", ofType: "mp3")!
+//        
+//        do {
+//            
+//            musicPlayer = try AVAudioPlayer(contentsOf: URL(string: path)!)
+//            musicPlayer.prepareToPlay()
+//            musicPlayer.numberOfLoops = -1
+//            musicPlayer.pause()
+//            
+//        } catch let err as NSError {
+//            print(err.debugDescription)
+//        }
+//    }
     
     func parsePokemonCSV() {
         
@@ -132,19 +132,19 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return CGSize(width: 105, height: 105)
     }
     
-    @IBAction func musicBtnPressed(_ sender: UIButton) {
-        
-        if musicPlayer.isPlaying {
-            
-            musicPlayer.pause()
-            sender.alpha = 0.5
-            
-        } else {
-            
-            musicPlayer.play()
-            sender.alpha = 1.0
-        }
-    }
+//    @IBAction func musicBtnPressed(_ sender: UIButton) {
+//        
+//        if musicPlayer.isPlaying {
+//            
+//            musicPlayer.pause()
+//            sender.alpha = 0.5
+//            
+//        } else {
+//            
+//            musicPlayer.play()
+//            sender.alpha = 1.0
+//        }
+//    }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         
